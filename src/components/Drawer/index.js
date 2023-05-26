@@ -4,7 +4,7 @@ import axios from "axios";
 import Info from "../Info";
 import { useCart } from "../../hooks/useCart";
 
-import styles from "./Drawer.module.css";
+import styles from "./Drawer.module.scss";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 

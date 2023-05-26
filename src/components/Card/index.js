@@ -1,7 +1,11 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
-import styles from "./Card.module.css";
+import styles from "./Card.module.scss";
 import AppContext from '../../context';
+import liked from "../../img/liked.svg"
+import unliked from "../../img/unliked.svg"
+import btnchecked from "../../img/btn-checked.svg"
+import btnplus from "../../img/btn-plus.svg"
 
 function Card({
   id,
@@ -47,7 +51,7 @@ function Card({
         <div>
          {onFavorite && (<div className={styles.favorite} onClick={onClickFavorite}>
             <img
-              src={isFavorite ? "/img/liked.svg" : "/img/unliked.svg"}
+              src={isFavorite ? {liked} : {unliked}}
               alt="unliked"
             />
           </div>)}
@@ -61,7 +65,7 @@ function Card({
             {onPlus && (<img
               className={styles.plus}
               onClick={onClickPlus}
-              src={isItemAdded(id) ? "/img/btn-checked.svg" : "/img/btn-plus.svg"}
+              src={isItemAdded(id) ? {btnchecked} : {btnplus}}
               alt="plus"
             />)}
           </div>
